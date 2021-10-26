@@ -1,12 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Text Analyzer</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link href="css/styles.css" rel="stylesheet" type="text/css">
+  <script src="js/jquery-3.6.0.js"></script>
+  <script src="js/scripts.js"></script>
 </head>
 <body>
-  
+  <div class="container">
+      <h2>Text Analyzer</h2>
+    <form id="word-counter">
+      <div class="form-group">
+        <p>Input a text passage to get a total word count:</p>
+        <textarea id="text-passage" name="text-passage" class="form-control"></textarea>
+        <p>Optionally enter a word to count the number of times it occurs in the passage:</p>
+        <input type="text" id="word" name="word" class="form-control">
+        <br>
+        <button type="submit" class="btn btn-success">Submit Survey</button>
+      </div>
+    </form>
+    <p>Total Word Count: <span id="total-count"></span></p>
+    <br>
+    <p>Selected Word Count: <span id="selected-count"></span></p>
+    <span id="bolded-passage"></span>
+  </div>
 </body>
 </html>
