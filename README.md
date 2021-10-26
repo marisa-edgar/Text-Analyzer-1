@@ -12,3 +12,5 @@
 * _const word = "red";_
 * _numberOfOccurrencesInText(word, text);_
 * _Expected Output: 0_
+
+### _Beyond this point, the TDD will be our own_
