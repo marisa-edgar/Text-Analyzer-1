@@ -24,21 +24,21 @@ function wordCounter(text) {
 
 // numberOfOccurrencesInText()
 
-// function numberOfOccurrencesInText(word, text) {
-//   if (noInputtedWord(word, text)) {
-//     return 0;
-//   }
-//   const wordArray = text.split(" ");
-//   let wordCount = 0;
-//   wordArray.forEach(function(element) {
-//     if (element.toLowerCase().includes(word.toLowerCase())) {
-//       wordCount++;
-//     }
-//   });
-//   return wordCount;
-// }
+function numberOfOccurrencesInText(word, text) {
+  if (noInputtedWord(word, text)) {
+    return 0;
+  }
+  const wordArray = text.split(" ");
+  let wordCount = 0;
+  wordArray.forEach(function(element) {
+    if (element.toLowerCase().includes(word.toLowerCase())) {
+      wordCount++;
+    }
+  });
+  return wordCount;
+}
 
-// boldPassage()
+boldPassage()
 
 function boldPassage(word, text) {
   if (noInputtedWord(word, text)) {
@@ -59,59 +59,17 @@ function boldPassage(word, text) {
   return htmlString + "</p>";
 }
 
-
-// Beyond this point the code will be our own
-
-// numberOFOccurrencesOfWOrd()
-
-function numberOFOccurrencesOfWords (input1, input2, input3, text) {
-  if (noInputtedWord(input1, input2, input3, text)) {
-    return 0;
-  }
-  const wordArray = text.split(" ");
-  let wordCount = 0;
-  wordArray.forEach(function(element) {
-    if (element.toLowerCase().includes(input1.toLowerCase())) {
-      wordCount++;
-    } else if (element.toLowerCase().includes(input2.toLowerCase())) {
-      wordCount++;
-    } else if (element.toLowerCase().includes(input3.toLowerCase())) {
-      wordCount++;
-    } 
-  });
-  return wordCount;
-}
-
 // UI Logic
-
-// $(document).ready(function(){
-//   $("form#word-counter").submit(function(event){
-//     event.preventDefault();
-//     const passage = $("#text-passage").val();
-//     const word = $("#word").val();
-//     const wordCount = wordCounter(passage);
-//     const occurrencesOfWord = numberOfOccurrencesInText(word, passage);
-//     $("#total-count").html(wordCount);
-//     $("#selected-count").html(occurrencesOfWord);
-//     $("#bolded-passage").html(boldPassage(word, passage));
-//   });
-// });
-
-// Beyond this point the code will be our own
 
 $(document).ready(function(){
   $("form#word-counter").submit(function(event){
     event.preventDefault();
     const passage = $("#text-passage").val();
-    const input1 = $("#input1").val();
-    const input2 = $("#input2").val();
-    const input3 = $("#input3").val();
+    const word = $("#word").val();
     const wordCount = wordCounter(passage);
-    const occurrencesOfWord = numberOFOccurrencesOfWords(input1, input2, input3, passage);
+    const occurrencesOfWord = numberOfOccurrencesInText(word, passage);
     $("#total-count").html(wordCount);
-    $("#output1").html(occurrencesOfWord);
-    $("#output2").html(occurrencesOfWord);
-    $("#output3").html(occurrencesOfWord);
-    $("#bolded-passage").html(boldPassage(input1, input2, input3, passage));
+    $("#selected-count").html(occurrencesOfWord);
+    $("#bolded-passage").html(boldPassage(word, passage));
   });
 });
