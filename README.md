@@ -14,3 +14,23 @@
 * _Expected Output: 0_
 
 ### _Beyond this point, the TDD will be our own_
+
+Test: "put a string into an array" 
+Code: const array = []
+Expected output: "We now have an array"
+
+Test: ""
+Code: 
+Expected output:
+
+Test: 
+Code:
+Expected output:
+
+Test: 
+Code:
+Expected output:
+
+Test: 
+Code:
+Expected output:

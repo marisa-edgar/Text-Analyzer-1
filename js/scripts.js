@@ -73,3 +73,28 @@ $(document).ready(function(){
     $("#bolded-passage").html(boldPassage(word, passage));
   });
 });
+
+// 10/27/21, this section by: Liam, Marisa & Zach.
+
+function vowelChecker(text) {
+  let output = [];
+  let array = text.split(" ");
+  array.forEach(function(element) {
+    if (element === "a");
+    return true;
+  } else (element !== "a") {
+    return false;
+  });
+});
+
+function piglatin(){
+const thisanarray = []
+}text.split(" ")
+
+
+
+/*if startingLetter === a, e, i, o, u
+  word = word + "way"
+
+  else 
+  word = (word -= startingLetter) + "ay"
